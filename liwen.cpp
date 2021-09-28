@@ -138,8 +138,11 @@ void organiserMenu()
             goto loop3;
     }
 
+}
 
-    /*cout << "\n\n" << endl;
+void organiserMenu2()
+{
+    cout << "\n\n" << endl;
     cout << "\t   I am an organiser\n" << endl;
     cout << "\t\tI want to..." << endl;
     cout << "\t\t1. Create an event" << endl;
@@ -149,9 +152,8 @@ void organiserMenu()
     cout << "\t\t5. View profile" << endl;
     cout << "\t\t6. Sign out" << endl << endl;
     cout << "\t   >> ";
-    cin >> choice;*/
-}
 
+}
 void adminMenu()
 {
     int choiceA;
