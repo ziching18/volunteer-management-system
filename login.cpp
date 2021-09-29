@@ -9,7 +9,7 @@ int main(){
     char password[20];
     char storedUser[20];
     char storedPass[20];
-    int attempt=0;
+    int attempt=1;
 
     while(attempt < 3){
         ifstream loginFile("login.txt");
@@ -28,6 +28,7 @@ int main(){
                 cout << "Username does not exist." << endl;
                 //bring back to login
                 cout << "Would you like to try again?";
+                return 0;
                 //ADD MENU TO BRING TO LOGIN
             }
         }
@@ -38,12 +39,22 @@ int main(){
 
         cout << "Password : ";
         cin >> password;
-        while(strcmp(password,storedPass)){
+        while(strcmp(password,storedPass) && attempt < 3){
             cout << "Wrong Password." << endl;
             cout << "Please Re-Enter Password : ";
             cin >> password;
+            attempt++;
         }
-        cout << "Login Successful." << endl;
+
+        if(attempt == 3 ){
+            cout << "Login attempt exceeded three times. You will be brought back to the menu.";
+            //BACK TO MENU,
+            return 0; //remove this once added back to menu
+        }else{
+            cout << "Login Successful." << endl;
+        }
+
+
     }
 
 
