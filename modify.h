@@ -34,7 +34,9 @@ void modifyVolAcc(string volID){
     cin.ignore();
     getline(cin, newLoca);
 
-    v.enqueue(newName);
+    v.enqueue(volID);
+    v.enqueue(newfName);
+    v.enqueue(newlName);
     v.enqueue(newGender);
     v.enqueue(newCont);
     v.enqueue(newEmail);
@@ -92,6 +94,9 @@ void modifyEvent(string eventID){
     cin.ignore();
     getline(cin, newReq);
 
+    modifyEventList(eventID, newName);
+    
+    q.enqueue(eventID);
     q.enqueue(newName);
     q.enqueue(newCate);
     q.enqueue(newOName);
