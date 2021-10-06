@@ -102,7 +102,7 @@ void searchEvent(){
 }
 
 void searchVolID(string searchID){
-    ifstream volIDfile ("volunteer-id.txt");
+    ifstream volIDfile ("v_id.txt");
     string volID;
     vector <string> volIDList;
     bool check = true;
