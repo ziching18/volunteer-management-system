@@ -114,7 +114,6 @@ void Queue::outputQueue(string fileName)
 {
      ofstream output(fileName);
      if (isEmpty())
-     if (isEmpty())
       cout<<"Queue is empty\n";
      else
      {
